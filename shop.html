@@ -154,11 +154,11 @@
 </div>
 <div class="flex gap-4 items-center">
 
-<button aria-label="shopping_bag" class="text-primary hover:text-primary-container transition-colors duration-200">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">shopping_bag</span>
+<button aria-label="shopping_bag" class="cart-toggle-btn text-primary hover:text-primary-container transition-colors duration-200 relative">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: &quot;FILL&quot; 0;">shopping_bag</span>
 </button>
-<button aria-label="person" class="text-primary hover:text-primary-container transition-colors duration-200">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">person</span>
+<button aria-label="person" class="text-primary hover:text-primary-container transition-colors duration-200 relative">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: &quot;FILL&quot; 0;">person</span>
 </button>
 </div>
 </div>
@@ -182,7 +182,8 @@
 </div>
 <div class="text-center">
 <h3 class="font-headline-md text-headline-md text-on-background mb-2">오리지널 피넛</h3>
-<p class="font-label-md text-label-md text-primary">₩18,000</p>
+<p class="font-label-md text-label-md text-primary mb-3">₩18,000</p>
+<button onclick="event.stopPropagation(); addToCart('prod1', '오리지널 피넛', 18000, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAGO920dlS97bkI2Ov4p7EIcUEU2Kwg0di03ShdH7Hb6_XDUfbouAXjKFUVYHFk2hn7H97eHNTgrats3MyxomJMQJ2VRQsmA_j0N3isyk4pkMqfljmsgVFzVVjDtOYrEs9gINT8GpmYcO3c9JHzRnRJUum-k7PSBRzQ7v-sGLrgB4dGWUzFRlbGDCBd0x3Qa0tfHq7ehXA5_NRFB1jxryG4uHvl9ixgh_7wwKrmjK_lYwobt4WH-GtEB0CO9FvBlT5Cq-a331zSHb9X')" class="w-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary py-2 rounded-full font-label-sm transition-colors duration-200">장바구니 담기</button>
 </div>
 </div>
 <!-- Product 2 -->
@@ -192,7 +193,8 @@
 </div>
 <div class="text-center">
 <h3 class="font-headline-md text-headline-md text-on-background mb-2">프리미엄 아몬드</h3>
-<p class="font-label-md text-label-md text-primary">₩22,000</p>
+<p class="font-label-md text-label-md text-primary mb-3">₩22,000</p>
+<button onclick="event.stopPropagation(); addToCart('prod2', '프리미엄 아몬드', 22000, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQj5Hjt-GOckyijmP33XqG_0YdxDBJsIZLs-9RoACdX7eC6iA4shIb-luqpwFffPpIfCbYz2AXwcAkTgRiIlQyLQFdSIpVlW0rqAHd39DGOCqwxXTdsDdndOvsT8xsEk2BNi5KusvkPrYIfM39WMYNX4wZ_JWfMl3oUcYIPEbcNa2dUVdYHpHYzxLbbWP7QvtMQJaOYvuS0twpJFEzM9Q0w1pKg9mNdWIeqtkDq362Vg_9lrx9RRfkb3Mo-JzkCAbLkPgUnvHJvc6F')" class="w-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary py-2 rounded-full font-label-sm transition-colors duration-200">장바구니 담기</button>
 </div>
 </div>
 <!-- Product 3 -->
@@ -205,7 +207,8 @@
 </div>
 <div class="text-center">
 <h3 class="font-headline-md text-headline-md text-on-background mb-2">씨솔트 피칸</h3>
-<p class="font-label-md text-label-md text-primary">₩24,000</p>
+<p class="font-label-md text-label-md text-primary mb-3">₩24,000</p>
+<button onclick="event.stopPropagation(); addToCart('prod3', '씨솔트 피칸', 24000, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCTno8i6n2XImIlBh3s0gBh2ku35wuUz6gpvh-27ykgWq0eBJoznUBIwla2sMB9jaUzHhgmnMKE99KXgTlA3zpWhwQuZ_WVFP3kMyTp69utIxlKmx-ErR_notf6-Nl4WbGX6lqWxMNokibLahJlGur0FYnDQP4d26A8ngYri3NR494Hlka_YDlQQfc27sfft6H6j1kMn_Z4DQE6rphjRTmsT5hK1qSSUeSf-OucHqD4y6BjG9yGPKYgTBMuWXjioz9KjyiCtAmLR5Vu')" class="w-full bg-surface-variant text-on-surface-variant hover:bg-primary hover:text-on-primary py-2 rounded-full font-label-sm transition-colors duration-200">장바구니 담기</button>
 </div>
 </div>
 </div>
@@ -287,4 +290,5 @@
         });
     });
 </script>
+<script src="cart.js"></script>
 </body></html>
