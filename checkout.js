@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pgProvider = "kakaopay.TC0ONETIME"; // 카카오페이 테스트 CID
         } else if (selectedPg === 'naverpay') {
             pgProvider = "naverpay";
+        } else if (selectedPg === 'tosspay') {
+            pgProvider = "tosspay";
         }
 
         const orderName = cart.length > 1 ? `${cart[0].name} 외 ${cart.length - 1}건` : cart[0].name;

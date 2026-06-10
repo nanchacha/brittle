@@ -68,6 +68,7 @@
                         // Payment colors
                         "kakao": "#FEE500",
                         "naver": "#03C75A",
+                        "toss": "#3182F6",
                     },
                     "fontFamily": {
                         "label-sm": ["Plus Jakarta Sans"],
@@ -135,7 +136,7 @@
                     <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payment</span>
                     결제 수단
                 </h2>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-3 gap-4">
                     <label class="cursor-pointer">
                         <input type="radio" name="payment-method" value="kakaopay" class="peer sr-only" checked>
                         <div class="rounded-xl border-2 border-outline-variant/30 p-6 flex flex-col items-center justify-center gap-3 peer-checked:border-[#FEE500] peer-checked:bg-[#FEE500]/10 transition-all hover:bg-surface-container-low">
@@ -151,6 +152,15 @@
                             <!-- 네이버페이 심볼 대용 -->
                             <div class="w-12 h-12 bg-[#03C75A] rounded-full flex items-center justify-center text-white font-bold text-xl">N</div>
                             <span class="font-label-md text-on-background">네이버페이</span>
+                        </div>
+                    </label>
+                    
+                    <label class="cursor-pointer">
+                        <input type="radio" name="payment-method" value="tosspay" class="peer sr-only">
+                        <div class="rounded-xl border-2 border-outline-variant/30 p-6 flex flex-col items-center justify-center gap-3 peer-checked:border-[#3182F6] peer-checked:bg-[#3182F6]/10 transition-all hover:bg-surface-container-low">
+                            <!-- 토스페이 심볼 대용 -->
+                            <div class="w-12 h-12 bg-[#3182F6] rounded-full flex items-center justify-center text-white font-bold text-xl">T</div>
+                            <span class="font-label-md text-on-background">토스페이</span>
                         </div>
                     </label>
                 </div>
