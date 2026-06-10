@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mother's Brittle | Checkout</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Vollkorn:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PortOne SDK -->
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#28180d",
+                        "secondary-container": "#f8dac8",
+                        "outline-variant": "#d6c3b4",
+                        "primary-fixed": "#ffdcbe",
+                        "surface-bright": "#fdf9f4",
+                        "surface-tint": "#885210",
+                        "surface": "#fdf9f4",
+                        "secondary-fixed-dim": "#dec1af",
+                        "surface-variant": "#e6e2dd",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f7f3ee",
+                        "surface-container": "#f1ede8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "outline": "#847467",
+                        "surface-container-high": "#ebe8e3",
+                        "secondary-fixed": "#fbddca",
+                        "on-secondary-fixed-variant": "#574335",
+                        "on-tertiary-container": "#482300",
+                        "background": "#fdf9f4",
+                        "on-primary-fixed-variant": "#693c00",
+                        "inverse-on-surface": "#f4f0eb",
+                        "on-primary-fixed": "#2c1600",
+                        "primary-fixed-dim": "#ffb870",
+                        "on-surface-variant": "#524439",
+                        "secondary": "#705a4c",
+                        "inverse-primary": "#ffb870",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1c1c19",
+                        "tertiary": "#855327",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#fbb884",
+                        "tertiary-fixed": "#ffdcc3",
+                        "tertiary-container": "#c38757",
+                        "surface-dim": "#ddd9d5",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#755e50",
+                        "on-tertiary-fixed-variant": "#693c12",
+                        "primary": "#885210",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-primary-container": "#442500",
+                        "inverse-surface": "#31302d",
+                        "surface-container-highest": "#e6e2dd",
+                        "primary-container": "#c68642",
+                        "on-primary": "#ffffff",
+                        // Payment colors
+                        "kakao": "#FEE500",
+                        "naver": "#03C75A",
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Vollkorn"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Vollkorn"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Vollkorn"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+<nav class="w-full sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0px_10px_30px_rgba(198,134,66,0.08)]">
+    <div class="max-w-[1280px] mx-auto px-6 flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="logo.png" alt="춘천 할미 로고" class="h-20 w-auto object-contain drop-shadow-sm">
+            <span class="text-3xl font-bold text-primary" style="font-family: 'Gungsuh', 'GungsuhChe', '궁서', '궁서체', serif; letter-spacing: -0.05em; margin-top: 5px;">춘천 할미</span>
+        </a>
+    </div>
+</nav>
+
+<main class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="font-headline-lg text-4xl text-on-background mb-8 pb-4 border-b border-outline-variant/30">결제하기</h1>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Left Column: Form & Payment Method -->
+        <div class="lg:col-span-2 space-y-10">
+            <!-- 배송지 정보 -->
+            <section class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/30">
+                <h2 class="font-headline-md text-2xl text-on-background mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+                    배송지 정보
+                </h2>
+                <div class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block font-label-md text-on-surface-variant mb-2">이름</label>
+                            <input type="text" id="buyer-name" class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="홍길동">
+                        </div>
+                        <div>
+                            <label class="block font-label-md text-on-surface-variant mb-2">연락처</label>
+                            <input type="tel" id="buyer-tel" class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="010-1234-5678">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">이메일</label>
+                        <input type="email" id="buyer-email" class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="example@email.com">
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-on-surface-variant mb-2">주소</label>
+                        <input type="text" id="buyer-addr" class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 mb-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="도로명/지번 주소">
+                        <input type="text" id="buyer-postcode" class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="상세 주소 및 우편번호">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 결제 수단 -->
+            <section class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/30">
+                <h2 class="font-headline-md text-2xl text-on-background mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payment</span>
+                    결제 수단
+                </h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="cursor-pointer">
+                        <input type="radio" name="payment-method" value="kakaopay" class="peer sr-only" checked>
+                        <div class="rounded-xl border-2 border-outline-variant/30 p-6 flex flex-col items-center justify-center gap-3 peer-checked:border-[#FEE500] peer-checked:bg-[#FEE500]/10 transition-all hover:bg-surface-container-low">
+                            <!-- 카카오페이 심볼 대용 -->
+                            <div class="w-12 h-12 bg-[#FEE500] rounded-full flex items-center justify-center text-[#000000] font-bold text-xl">K</div>
+                            <span class="font-label-md text-on-background">카카오페이</span>
+                        </div>
+                    </label>
+                    
+                    <label class="cursor-pointer">
+                        <input type="radio" name="payment-method" value="naverpay" class="peer sr-only">
+                        <div class="rounded-xl border-2 border-outline-variant/30 p-6 flex flex-col items-center justify-center gap-3 peer-checked:border-[#03C75A] peer-checked:bg-[#03C75A]/10 transition-all hover:bg-surface-container-low">
+                            <!-- 네이버페이 심볼 대용 -->
+                            <div class="w-12 h-12 bg-[#03C75A] rounded-full flex items-center justify-center text-white font-bold text-xl">N</div>
+                            <span class="font-label-md text-on-background">네이버페이</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <div class="lg:col-span-1">
+            <div class="bg-surface-container-low rounded-2xl p-8 sticky top-28 shadow-sm">
+                <h3 class="font-headline-md text-xl text-on-background mb-6">주문 요약</h3>
+                
+                <div id="checkout-items" class="space-y-4 mb-6 max-h-[400px] overflow-y-auto pr-2">
+                    <!-- Items will be loaded here via JS -->
+                </div>
+                
+                <div class="border-t border-outline-variant/30 pt-6 space-y-3 mb-6">
+                    <div class="flex justify-between font-body-md text-on-surface-variant">
+                        <span>상품 금액</span>
+                        <span id="summary-subtotal">₩0</span>
+                    </div>
+                    <div class="flex justify-between font-body-md text-on-surface-variant">
+                        <span>배송비</span>
+                        <span id="summary-shipping">₩3,000</span>
+                    </div>
+                </div>
+                
+                <div class="border-t border-outline-variant/30 pt-6 mb-8">
+                    <div class="flex justify-between items-end">
+                        <span class="font-label-md text-on-background">총 결제 금액</span>
+                        <span id="summary-total" class="font-headline-md text-3xl text-primary">₩0</span>
+                    </div>
+                </div>
+                
+                <button id="pay-btn" class="w-full bg-primary text-on-primary rounded-full py-4 font-label-md text-lg hover:bg-primary/90 hover:scale-[0.98] transition-all shadow-md">
+                    결제하기
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="w-full py-12 mt-20 bg-secondary-container">
+    <div class="max-w-[1280px] mx-auto px-6 text-center">
+        <div class="font-headline-lg text-primary mb-2" style="font-family: 'Gungsuh', 'GungsuhChe', '궁서', '궁서체', serif;">춘천 할미</div>
+        <div class="font-body-md text-on-secondary-container">© 2024 춘천 할미. 모든 권리 보유.</div>
+    </div>
+</footer>
+
+<script type="module" src="checkout.js"></script>
+</body>
+</html>

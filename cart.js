@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('checkout-btn').addEventListener('click', () => {
         if(cart.length === 0) return alert('장바구니가 비어있습니다.');
-        alert('결제 페이지로 이동합니다. (준비 중)');
+        window.location.href = 'checkout.html';
     });
 
     // 7. Initial Render
