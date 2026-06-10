@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         items: cart,
                         totalAmount: total,
                         paymentMethod: selectedPg,
-                        createdAt: new Date().toISOString()
+                        createdAt: new Date().toISOString(),
+                        status: "pending"
                     });
                     
                     alert(`결제가 완료되었습니다. 주문번호: ${rsp.merchant_uid}`);
